@@ -28,6 +28,7 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'io.github.microutils:kotlin-logging:1.6.24'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.3.RELEASE'
 }
 
 dependencyManagement {

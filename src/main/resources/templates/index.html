@@ -6,5 +6,16 @@
 </head>
 <body>
 <h1>FMI Temperature</h1>
+
+<div th:text="${temperatures.weatherStationName}"></div>
+
+<table>
+    <tr th:each="daytemperature : ${temperatures.dayTemperatureSeries}">
+        <td th:text="${#temporals.format(daytemperature.date, 'd.M.yyyy')}"></td>
+        <td th:text="${daytemperature.avgTemperature} + '&#8451;'"></td>
+    </tr>
+
+</table>
+
 </body>
 </html>

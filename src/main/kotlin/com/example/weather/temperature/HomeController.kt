@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping
 private val logger = KotlinLogging.logger { }
 
 @Controller
-class HomeController {
+class HomeController(private val weatherService: WeatherService) {
 
     @GetMapping("/")
     fun home(model: Model):String {
         logger.info { "GET Home request" }
+        model.addAttribute("weatherStation", KAISANIEMI)
+        model.addAttribute("temperatures", weatherService.getDailyTemperaturesForLastSevenDays(KAISANIEMI))
         return "index"
     }
 
