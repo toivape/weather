@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk
 
 # VOLUME pointing to "/tmp" because that is where a Spring Boot application creates working directories for Tomcat by default.
 VOLUME /tmp

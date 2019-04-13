@@ -3,4 +3,4 @@
 # Build docker image
 #
 
-docker build --tag="weather:latest" .
+docker build --tag="weather:1.0.0" .
