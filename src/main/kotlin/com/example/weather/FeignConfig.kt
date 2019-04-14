@@ -8,8 +8,11 @@ import org.springframework.context.annotation.Bean
 @Configuration
 @EnableFeignClients
 class FeignConfig{
+
+    /**
+     * Needed to enable application.properties
+     * logging.level.com.example.weather.fmi.FmiFeignClient=DEBUG
+     */
     @Bean
-    fun feignLoggerLevel(): Logger.Level {
-        return Logger.Level.HEADERS
-    }
+    fun feignLoggerLevel(): Logger.Level = Logger.Level.HEADERS
 }
